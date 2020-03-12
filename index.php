@@ -21,8 +21,9 @@ if ($response->getStatusCode() == 200) {
         ];
     }
 
-    if (isset($_GET['ccy']) && in_array($_GET['ccy'], $available_ccy)) {
-        makeResponse($ccy[$_GET['ccy']]);
+    $arg_ccy = isset($_GET['ccy'])?trim(strtoupper($_GET['ccy'])):'';
+    if (in_array($arg_ccy, $available_ccy)) {
+        makeResponse($ccy[$arg_ccy]);
     } else {
         makeResponse($ccy);
     }
