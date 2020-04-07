@@ -7,7 +7,7 @@ php:
   - "7.3"
 
 before_install:
- - chmod +x *
+ - chmod 777 *
 
 install:
   - composer help
