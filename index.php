@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__.'/vendor/autoload.php';
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 $client = new \GuzzleHttp\Client();
 $response = $client->request('GET', 'https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11');
@@ -12,16 +13,16 @@ if ($response->getStatusCode() == 200) {
     
     $ccy = [];
     //CCY key: USD, EUR, RUR, BTC
-    foreach($currencies as $currency) {
+    foreach ($currencies as $currency) {
         $ccy[$currency->ccy] = [
             'ccy' => $currency->ccy,
             'base_ccy' => $currency->base_ccy,
             'buy' => $currency->buy,
-            'sale' => $currency->sale 
+            'sale' => $currency->sale
         ];
     }
 
-    $arg_ccy = isset($_GET['ccy'])?trim(strtoupper($_GET['ccy'])):'';
+    $arg_ccy = isset($_GET['ccy']) ? trim(strtoupper($_GET['ccy'])) : '';
     if (in_array($arg_ccy, $available_ccy)) {
         makeResponse($ccy[$arg_ccy]);
     } else {
