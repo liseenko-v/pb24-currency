@@ -16,6 +16,6 @@ class ExampleTest extends TestCase
 
         $a = 2;
         $b = 3;
-        $this->assertEquals(6, sum($a, $b));
+        $this->assertEquals(5, sum($a, $b));
     }
 }
