@@ -11,4 +11,4 @@ install:
 
 script:
   - ./vendor/bin/phpcs -n
-  - phpunit test/ExampleTest.php
+  - phpunit tests/ExampleTest.php
