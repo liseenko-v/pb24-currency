@@ -11,4 +11,4 @@ install:
 
 script:
   - ./vendor/bin/phpcs -n
-  - php vendor/bin/phpunit tests
+  - ./vendor/bin/phpunit --testsuite Unit 
