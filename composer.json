@@ -1,4 +1,12 @@
 {
+    "name": "pb24-currency",
+    "description": "The PHP script.",
+    "keywords": [
+        "script",
+        "php"
+    ],
+    "license": "MIT",
+    "type": "project",
     "require": {
         "guzzlehttp/guzzle": "^6.5"
     },
