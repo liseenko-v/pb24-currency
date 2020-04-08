@@ -7,15 +7,4 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-    public function testSum()
-    {
-        function sum($a, $b) {
-            return $a + $b;
-        }
-
-        $a = 2;
-        $b = 3;
-        $this->assertEquals(5, sum($a, $b));
-    }
 }
