@@ -14,4 +14,4 @@ install:
 
 script:
   - ./vendor/bin/phpcs -n
-  - ./vendor/bin/phpunit tests
+  - ./vendor/bin/phpunit tests/
